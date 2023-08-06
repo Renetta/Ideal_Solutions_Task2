@@ -1,0 +1,153 @@
+.sidebar {
+    position: fixed;
+    top: 73px;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    padding: 10px 14px;
+    color: var(--text-color);
+    background-color: var(--sidebar-color);
+    /* transition: var(--trans-05); */
+    z-index: 2;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar .close-text-display {
+    visibility: hidden;
+}
+
+.close {
+    width: 78px;
+    background-color: var(--sidebar-color);
+}
+
+
+.close .close-text {
+    opacity: 0;
+}
+
+.close .close-text-display {
+    visibility: visible;
+    font-weight: 600;
+}
+
+.close .close-margin {
+    margin-left: -20px;
+}
+
+
+
+.sidebar li {
+    height: 40px;
+    /* margin-top: 10px; */
+    display: flex;
+}
+
+.sidebar li .text {
+    color: var(--text-color);
+}
+
+.sidebar li a {
+    /* height: 30px; */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    /* border-radius: 6px; */
+    transition: var(--trans-05);
+}
+
+
+.sidebar li:hover {
+    background-color: var(--hover-color);
+    border-radius: 15px;
+    transition: var(--trans-05);
+}
+
+.sidebar li a:hover .text {
+    color: var(--white-color);
+    font-weight: 400;
+}
+
+.sidebar li a.active {
+    transition: var(--trans-05);
+    background-color: var(--hover-color);
+}
+
+.sidebar li a.active .text {
+    color: var(--white-color);
+    font-weight: 400;
+}
+/* 
+.close li{
+     height: 40px;
+     display: flex;
+     border-radius: 6px; 
+     transition: var(--trans-05);
+ } */
+
+ /* .close .nav-links {
+    margin-top: 2px;
+ } */
+
+
+.sidebar li a.active {
+    border-radius: 6px;
+    /* transition: var(--trans-05); */
+    background-color: var(--hover-color);
+    color: var(--white-color);
+}
+
+.sidebar .menu-links {
+    padding-left: 0px;
+}
+
+.sidebar-divider {
+    background-color: var(--color-primary);
+    border-top: 2px solid rgba(255, 255, 255, .15);
+}
+
+.sidebar hr .sidebar-divider {
+    margin: 0 1rem 1rem;
+}
+
+.close .close-toggle {
+    top: 5%;
+    left: 10%;
+    align-items: center;
+}
+
+.close li a .top {
+    margin-top: 15px;
+}
+
+.close li a .down {
+    margin-top: 30px;
+}
+
+
+.sidebar .menu-bar {
+    height: calc(100% - 50px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.page-content {
+    position: relative;
+    height: 100vh;
+    left: 250px;
+    width: calc(100% - 250px);
+    /* transition: var(--trans-05); */
+}
+
+.alignMainContent {
+    left: 78px;
+    width: calc(100% - 78px);
+    transition: var(--trans-05);
+}
+
+.content-details {
+    position: relative;
+    top: 15%;
+}
+

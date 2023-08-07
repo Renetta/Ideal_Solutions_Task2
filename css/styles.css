@@ -2,6 +2,7 @@
 :root {
     --color-primary: #757589;
     --sidebar-color: #ffffff;
+    --back-color: #dee2e6;
     --body-color: #e9ecef;
     --text-color: #000;
     --hover-color: #dc3545a3;
@@ -40,4 +41,65 @@ body {
     /* color: #212121; */
     line-height: 1.4;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    /* font-family: "Glitten Standard"; */
+    letter-spacing: 0;
+    color: #000;
+    font-weight: 700;
+}
 
+.dropdown-btn-white {
+    background-color: var(--white-color);
+    color: var(--color-primary);
+}
+
+.dropdown-btn-white:hover {
+    background-color: var(--color-primary);
+    color: var(--white-color);
+    border: var(--color-primary);
+}
+
+.dropdown-btn-white:focus {
+    background-color: var(--color-primary);
+    color: var(--white-color);
+    border: var(--color-primary);
+}
+
+.btn-color {
+    background-color: var(--main-color);
+    color: var(--white-color);
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.btn-clear-color {
+    background-color: var(--white-color);
+    color: #000;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.btn-color:hover {
+    background-color: var(--hover-color);
+    color: var(--white-color);
+}
+
+.form-check-input:checked {
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+}
+
+.btn-close {
+    font-size: 10px;
+}
+
+.form-control {
+    color: var(--color-primary);
+}
+
+.label-text {
+    font-size: 13px;
+}

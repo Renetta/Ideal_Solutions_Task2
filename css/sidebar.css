@@ -68,9 +68,11 @@
     font-weight: 400;
 }
 
-.sidebar li a.active {
+.active {
     transition: var(--trans-05);
     background-color: var(--hover-color);
+    border-radius: 15px;
+    color: var(--white-color);
 }
 
 .sidebar li a.active .text {
@@ -132,22 +134,4 @@
     justify-content: space-between;
 }
 
-.page-content {
-    position: relative;
-    height: 100vh;
-    left: 250px;
-    width: calc(100% - 250px);
-    /* transition: var(--trans-05); */
-}
-
-.alignMainContent {
-    left: 78px;
-    width: calc(100% - 78px);
-    transition: var(--trans-05);
-}
-
-.content-details {
-    position: relative;
-    top: 15%;
-}
 

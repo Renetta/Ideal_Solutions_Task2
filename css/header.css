@@ -1,8 +1,13 @@
 .header {
     /* width: 100%;
     height: 50px; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     background-color: #fff;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    z-index: 2;
 }
 
 /* .header .nav-pills .nav-link:hover {
@@ -55,7 +60,7 @@
 }
 
 .search-bar {
-    border-radius: 15px;
+    border-radius: 10px;
 }
 
 .bi-search::before {
@@ -74,6 +79,7 @@
 @media only screen and (min-width: 1200px) and (max-width: 1599px) {
     /* normal lapotop screen */
 
+
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -84,6 +90,11 @@
     .header .header-item-third {
         margin-left: 30%;
     }
+
+    .page-content .user-add-btn {
+        text-align: start;
+    }
+
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -94,6 +105,9 @@
     .header .header-item-third {
         margin-left: 20%;
     }
+    .page-content .user-add-btn {
+        text-align: start;
+    }
 }
 
 
@@ -101,15 +115,18 @@
     .header .header-item-third {
         margin-left: 10%;
     }
+    .page-content .user-add-btn {
+        text-align: start;
+    }
 }
 
 @media only screen and (min-width: 451px) and (max-width: 575px) {
     .header .header-item-third {
         margin-left: 1%;
     }
-    /* .header .header-item-second {
-        display: none;
-    }  */
+    .page-content .user-add-btn {
+        text-align: start;
+    }
 } 
 @media only screen and (min-width: 380px) and (max-width: 450px) {
     .header .header-item-third {
@@ -118,6 +135,9 @@
     .header .header-item-second {
         display: none;
     } 
+    .page-content .user-add-btn {
+        text-align: start;
+    }
 } 
 @media only screen and (min-width: 290px) and (max-width: 379px) {
      .header .header-item-second {
@@ -127,6 +147,10 @@
     .header .header-item-third {
         margin-left: 20%;
     }
+
+    .page-content .user-add-btn {
+        text-align: start;
+    }
 } 
 @media only screen and (min-width: 100px) and (max-width: 289px) {
      .header .header-item-second {
@@ -135,5 +159,9 @@
 
     .header .header-item-third {
         margin-left: 0%;
+    }
+
+    .page-content .user-add-btn {
+        text-align: start;
     }
 } 

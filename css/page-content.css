@@ -1,0 +1,51 @@
+
+.page-content {
+    position: relative;
+    margin-top: 100px;
+    height: 100vh;
+    left: 250px;
+    width: calc(100% - 250px);
+    /* transition: var(--trans-05); */
+}
+
+.alignMainContent {
+    left: 78px;
+    width: calc(100% - 78px);
+    transition: var(--trans-05);
+}
+
+.content-details {
+    position: relative;
+}
+
+.page-content .search-bar {
+    width: 250px;
+}
+
+.page-content .bi-search::before {
+    content: "\f52a";
+    position: absolute;
+    top: 12px;
+    left: 70%;
+    color: var(--color-primary);
+}
+
+.page-content .user-add-btn {
+    text-align: end;
+}
+
+.page-content .form-check-label {
+    color: var(--color-primary);
+    padding: 0px;
+    font-size: 13px;
+}
+
+.page-content .filter-color {
+    background-color: var(--back-color);
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+}
+.page-content .label-text {
+    height: 30px;
+    padding: 10px;
+}

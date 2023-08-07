@@ -14,6 +14,7 @@
         <link rel="stylesheet" href="./css/styles.css">
         <link rel="stylesheet" href="./css/header.css">
         <link rel="stylesheet" href="./css/sidebar.css">
+        <link rel="stylesheet" href="./css/page-content.css">
 
     </head>
     <body>
@@ -83,7 +84,7 @@
                                 <ul class="menu-links">
                                     <li
                                         class="nav-links d-flex align-items-center ">
-                                        <a href="./dashboard.php">
+                                        <a href="./index.html">
                                             <span
                                                 class="text nav-text ms-3 top">
                                                 <i class="bi bi-columns"></i>
@@ -93,8 +94,8 @@
                                         </a>
                                     </li>
                                     <li
-                                        class="nav-links d-flex align-items-center ">
-                                        <a href="./dashboard.php">
+                                        class="nav-links d-flex align-items-center" id="users">
+                                        <a href="#" onclick="activateClass('users')">
                                             <span
                                                 class="text nav-text ms-3 top">
                                                 <i class="bi bi-person"></i>
@@ -105,7 +106,7 @@
                                     </li>
                                     <li
                                         class="nav-links d-flex align-items-center ">
-                                        <a href="./dashboard.php">
+                                        <a href="./index.html">
                                             <span
                                                 class="text nav-text ms-3 top">
                                                 <i class="bi bi-journals"></i>
@@ -116,7 +117,7 @@
                                     </li>
                                     <li
                                         class="nav-links d-flex align-items-center ">
-                                        <a href="./dashboard.php">
+                                        <a href="./index.html">
                                             <span
                                                 class="text nav-text ms-3 top">
                                                 <i class="bi bi-tag"></i>
@@ -127,7 +128,7 @@
                                     </li>
                                     <li
                                         class="nav-links d-flex align-items-center ">
-                                        <a href="./dashboard.php">
+                                        <a href="./index.html">
                                             <span
                                                 class="text nav-text ms-3 top">
                                                 <i class="bi bi-bar-chart"></i>
@@ -140,7 +141,7 @@
 
                                     <li
                                         class="nav-links d-flex align-items-center">
-                                        <a href="./categories.php">
+                                        <a href="./index.html">
                                             <span
                                                 class="text nav-text ms-3 down">
                                                 <i class="bi bi-person"></i>
@@ -152,7 +153,7 @@
                                     </li>
                                     <li
                                         class="nav-links d-flex align-items-center"><a
-                                            href="./products.php">
+                                            href="./index.html">
                                             <span
                                                 class="text nav-text ms-3 down">
                                                 <i class="bi bi-gear"></i>
@@ -168,11 +169,74 @@
                 <!-- --------SIDEBAR SECTION ENDS ----- -->
                 <div id="main">
                     <!-- --------PAGECONTENT SECTION START ----- -->
-                    <section class="page-content">
-                        <div class="container">
-                            <p>users</p>
+                    <section class="page-content ms-3">
+                        <div class="content-details mt-5 ">
+                            <div class="container">
+                                <h3>Users</h3>
+                                <div class="row align-self-start">
+                                    <div class="col-md-4 mb-1">
+                                        <div class="input-group">
+                                            <input
+                                                class="form-control border-end-0 border rounded-3"
+                                                type="text"
+                                                placeholder="Search by name or email"
+                                                id="example-search-input">
+                                            <span
+                                                class="input-group-append ms-5">
+                                                <i class="bi bi-search"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-1 dropdown mb-1">
+                                        <button
+                                            class="btn dropdown-btn-white btn-sm dropdown-toggle"
+                                            type="button"
+                                            data-bs-toggle="dropdown"
+                                            aria-expanded="false">
+                                            Role
+                                        </button>
+                                        <ul class="dropdown-menu" id="role">
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-1 dropdown mb-1">
+                                        <button
+                                            class="btn dropdown-btn-white btn-sm dropdown-toggle"
+                                            type="button"
+                                            data-bs-toggle="dropdown"
+                                            aria-expanded="false">
+                                            Status
+                                        </button>
+
+                                        <ul class="dropdown-menu" id="status">
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-1 dropdown mb-1">
+                                        <button
+                                            class="btn dropdown-btn-white btn-sm dropdown-toggle"
+                                            type="button"
+                                            data-bs-toggle="dropdown"
+                                            aria-expanded="false">
+                                            Publisher
+                                        </button>
+                                        <ul class="dropdown-menu" id="publisher">
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-4 ms-5 user-add-btn mb-1">
+                                        <button type="button"
+                                            class="btn btn-color btn-sm">
+                                            <i class="bi bi-plus fw-500"></i>
+                                            <span>Invite User</span></button>
+                                    </div>
+                                </div>
+                                <div class="row mt-3" id="filter"></div>
+                                <div class="row">
+                                    <div class="col-md-11 ms-5 user-add-btn">
+                                        <button class="btn btn-clear-color btn-sm" onclick="clearFilters()">Clear filters</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        
+
                     </section>
                     <!-- --------PAGECONTENT SECTION ENDS ----- -->
                 </div>

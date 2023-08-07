@@ -18,6 +18,7 @@ var rolecheckboxes = document.getElementById("role");
 var publishercheckboxes = document.getElementById("publisher");
 var filterID = document.getElementById("filter");
 var usersID = document.getElementById("users");
+var dashboardID = document.getElementById("dashboard");
 
 
 var statusData = [{
@@ -79,7 +80,8 @@ function appendStatusData() {
             '</li>';
     }
 
-    checkboxes.innerHTML = checkBoxarr;
+    if (checkboxes)
+        checkboxes.innerHTML = checkBoxarr;
     checkBoxarr = [];
     for (var i = 0; i < roleData.length; i++) {
         if (roleData[i].value) checked = 'flexCheckChecked';
@@ -91,7 +93,8 @@ function appendStatusData() {
             '</li>';
     }
 
-    rolecheckboxes.innerHTML = checkBoxarr;
+    if(rolecheckboxes)
+        rolecheckboxes.innerHTML = checkBoxarr;
     checkBoxarr = [];
     for (var i = 0; i < publisherData.length; i++) {
         if (publisherData[i].value) checked = 'flexCheckChecked';
@@ -102,8 +105,8 @@ function appendStatusData() {
             '</div>' +
             '</li>';
     }
-
-    publishercheckboxes.innerHTML = checkBoxarr;
+    if (publishercheckboxes)
+        publishercheckboxes.innerHTML = checkBoxarr;
 }
 var filterArr = [];
 var selectedItem = [];
@@ -145,13 +148,17 @@ function clearFilters() {
     filterID.innerHTML = [];
 
 }
-
+var elId;
 function activateClass(el) {
     console.log(el);
-    var elId;
+
     switch(el) {
         case 'users': 
             elId = usersID;
+            elId.classList.toggle("active");
+            break;
+        case 'dashboard': 
+            elId = dashboardID;
             elId.classList.toggle("active");
             break;
         default: break;          

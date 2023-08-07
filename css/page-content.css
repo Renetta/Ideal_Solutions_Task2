@@ -2,7 +2,7 @@
 .page-content {
     position: relative;
     margin-top: 100px;
-    height: 100vh;
+    /* height: 100vh; */
     left: 250px;
     width: calc(100% - 250px);
     /* transition: var(--trans-05); */
@@ -37,7 +37,7 @@
 .page-content .form-check-label {
     color: var(--color-primary);
     padding: 0px;
-    font-size: 13px;
+    font-size: 12px;
 }
 
 .page-content .filter-color {
@@ -47,5 +47,31 @@
 }
 .page-content .label-text {
     height: 30px;
-    padding: 10px;
+    padding: 12px;
+}
+
+.page-content th {
+    color: var(--color-primary);
+    font-weight: 400;
+}
+.page-content tbody {
+    background-color: var(--white-color);
+}
+
+tr:first-child td:first-child { border-top-left-radius: 10px; }
+tr:first-child td:last-child { border-top-right-radius: 10px; }
+
+tr:last-child td:first-child { border-bottom-left-radius: 10px; }
+tr:last-child td:last-child { border-bottom-right-radius: 10px; }
+
+tr:first-child td { border-top-style: solid; }
+tr td:first-child { border-left-style: solid; }
+
+tr {
+    height: 50px;
+    
+}
+
+tr .heading {
+    text-align: -webkit-center;
 }

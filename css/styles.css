@@ -3,7 +3,7 @@
     --color-primary: #757589;
     --sidebar-color: #ffffff;
     --back-color: #dee2e6;
-    --body-color: #e9ecef;
+    --body-color: #f8f8f8;
     --text-color: #000;
     --hover-color: #dc3545a3;
     --white-color: #ffffff;
@@ -23,6 +23,8 @@
 
 a {
     text-decoration: none;
+    color: #000;
+    cursor: pointer;
 }
 
 html {
@@ -31,7 +33,7 @@ html {
 }
 
 body {
-    overflow: hidden;
+    /* overflow: hidden; */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-family: Roboto, Arial, sans-serif;
@@ -102,4 +104,13 @@ h6 {
 
 .label-text {
     font-size: 13px;
+}
+
+.color-grey {
+    color: var(--color-primary);
+    font-size: 10px;
+}
+
+.cursor {
+    cursor: pointer;
 }

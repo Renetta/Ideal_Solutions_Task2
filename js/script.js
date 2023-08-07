@@ -6,14 +6,13 @@ pageContent = body.querySelector(".page-content");
 
 
 toggle.addEventListener("click", () => {
-    console.log('clicked');
     sidebar.classList.toggle("close");
     // header.classList.toggle("close");
     pageContent.classList.toggle("alignMainContent");
     console.log(pageContent);
 });
 
-var checkboxes = document.getElementById("status");
+var statuscheckboxes = document.getElementById("status");
 var rolecheckboxes = document.getElementById("role");
 var publishercheckboxes = document.getElementById("publisher");
 var filterID = document.getElementById("filter");
@@ -70,18 +69,7 @@ var publisherData = [{
 function appendStatusData() {
     var checkBoxarr = [];
     var checked = 'flexCheckChecked';
-    for (var i = 0; i < statusData.length; i++) {
-        if (statusData[i].value) checked = 'flexCheckChecked';
-        else checked = 'flexCheckDefault';
-        checkBoxarr += '<li><div class="form-check ms-1"> ' +
-            '<input class="form-check-input" type="checkbox" value="' + statusData[i].name + '" id="' + checked + '" onclick="getInputValue(this)">' +
-            '<label class="form-check-label alert ' + statusData[i].color + '"  for="' + checked + '">' + statusData[i].name + '</label>' +
-            '</div>' +
-            '</li>';
-    }
 
-    if (checkboxes)
-        checkboxes.innerHTML = checkBoxarr;
     checkBoxarr = [];
     for (var i = 0; i < roleData.length; i++) {
         if (roleData[i].value) checked = 'flexCheckChecked';
@@ -93,12 +81,13 @@ function appendStatusData() {
             '</li>';
     }
 
-    if(rolecheckboxes)
+    if (rolecheckboxes)
         rolecheckboxes.innerHTML = checkBoxarr;
     checkBoxarr = [];
     for (var i = 0; i < publisherData.length; i++) {
         if (publisherData[i].value) checked = 'flexCheckChecked';
         else checked = 'flexCheckDefault';
+        console.log(publisherData[i].name);
         checkBoxarr += '<li><div class="form-check ms-1"> ' +
             '<input class="form-check-input" type="checkbox" value="' + publisherData[i].name + '" id="' + checked + '" onclick="getInputValue(this)">' +
             '<label class="form-check-label"  for="' + checked + '">' + publisherData[i].name + '</label>' +
@@ -107,6 +96,19 @@ function appendStatusData() {
     }
     if (publishercheckboxes)
         publishercheckboxes.innerHTML = checkBoxarr;
+
+    checkBoxarr = [];
+    for (var i = 0; i < statusData.length; i++) {
+        if (statusData[i].value) checked = 'flexCheckChecked';
+        else checked = 'flexCheckDefault';
+        checkBoxarr += '<li><div class="form-check ms-1"> ' +
+            '<input class="form-check-input" type="checkbox" value="' + statusData[i].name + '" id="' + checked + '" onclick="getInputValue(this)">' +
+            '<label class="form-check-label alert ' + statusData[i].color + '"  for="' + checked + '">' + statusData[i].name + '</label>' +
+            '</div>' +
+            '</li>';
+    }
+    if (statuscheckboxes)
+        statuscheckboxes.innerHTML = checkBoxarr;
 }
 var filterArr = [];
 var selectedItem = [];
@@ -122,7 +124,7 @@ function getInputValue(data) {
             name: data.value,
             checked: data.checked
         });
-    } else if (!data.checked && isTaken){
+    } else if (!data.checked && isTaken) {
         let index = -1;
         filterArr.forEach((item) => {
             if (item.name == data.value)
@@ -133,11 +135,11 @@ function getInputValue(data) {
     }
 
     selectedItem = [];
-    for(var i = 0; i < filterArr.length; i++) {
-        selectedItem += '<div class="col-md-2 mb-2 text-center">'+
-        '<label for="" class="form-control filter-color">'+filterArr[i].name+
-        '</label>'+
-        '</div>';
+    for (var i = 0; i < filterArr.length; i++) {
+        selectedItem += '<div class="col-md-2 mb-2 text-center">' +
+            '<label for="" class="form-control filter-color" style="font-size: 10px">' + filterArr[i].name +
+            '</label>' +
+            '</div>';
     };
 
     filterID.innerHTML = selectedItem;
@@ -150,18 +152,16 @@ function clearFilters() {
 }
 var elId;
 function activateClass(el) {
-    console.log(el);
-
-    switch(el) {
-        case 'users': 
+    switch (el) {
+        case 'users':
             elId = usersID;
             elId.classList.toggle("active");
             break;
-        case 'dashboard': 
+        case 'dashboard':
             elId = dashboardID;
             elId.classList.toggle("active");
             break;
-        default: break;          
+        default: break;
 
     }
 }

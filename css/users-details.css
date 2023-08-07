@@ -1,0 +1,12 @@
+.breadcrumb-container {
+    background-color: var(--back-color);
+}
+
+.nickname {
+    margin-top: -10px;
+    margin-left: 10px;
+}
+
+.about {
+    letter-spacing: 0.5px;
+}
